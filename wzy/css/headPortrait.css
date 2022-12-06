@@ -1,0 +1,20 @@
+.img{
+    text-align: center;
+    line-height: 30px;
+}
+.img img{
+border-radius: 50%;
+font-size: 0;
+border: 1px solid rgb(188, 181, 181);
+}
+.img input{
+    width: 80px;
+    height: 30px;
+    color: aliceblue;
+    border-radius: 5px;
+    border: none;
+background-color: rgba(0, 0, 0, 0.523);
+
+}.img input:hover{
+    background-color: rgba(14, 14, 14, 0.804);
+}

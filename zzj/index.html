@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Title</title>
+    <link rel="stylesheet"
+          href="dist/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet"
+          href="css/page.css">
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet"
+          href="css/index.css">
+</head>
+
+<body style="margin: 0">
+
+<div id="onebigbox"
+     class="w-full scroll-smooth h-screen bigcountbox flex  overflow-hidden justify-center flex-col z-20">
+    <div id="inbigcountboxid"
+         class="inbigcountbox w-full flex justify-start scroll-smooth">
+        <div id=""
+             class="inboxnpm install -D tailwindcss@ w-full h-screen  flex items-center justify-between flex-shrink-0">
+            <div class="inbox w-full h-1/3  flex items-center justify-center absolute z-40">
+                <span class="text-7xl text-blue-50 font-black">你的音乐,你做主。</span>
+            </div>
+
+            <div class="inbox w-full h-screen  flex items-center justify-center absolute overflow-hidden">
+                <video id="video"
+                       class="w-full h-full scale-[1.5 2xl:scale-[1.5] xl:scale-[1.5] lg:scale-[1.5] sm:scale-[8]"
+                       autoplay="autoplay"
+                       loop="loop"
+                       muted="muted">
+                    <source src="video/4KAirPodsPro第二代广告视频宣传片苹果秋季新品发布会2022-TimberDC-BV1wa411G78M-yYMPDHNxnglRSZi2.mp4"
+                            type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="inbox w-full h-screen bg-gray-500 flex-shrink-0">
+            <div id="inbox2"
+                 class="inbox w-full h-full">
+                <div id="spacelbox1"
+                     class="w-full h-1/2 bg-blue-400  flex items-center justify-center">
+                    <span id="spacelbox1text"
+                          class="text-7xl text-blue-50 font-black">空间音频</span>
+                </div>
+
+                <div id="spacelboxother"
+                     class="w-full h-screen bg-blue-400  flex items-center justify-center absolute z-10">
+                    <div class="w-full h-screen">
+                        <div class="inbox w-full h-screen  flex items-center justify-between">
+                            -->
+                            <div class="w-full h-full absolute z-10 flex items-center justify-center overflow-hidden">
+                                <img class="bigimg scale-[4] blur-sm 2xl:scale-[4] xl:scale-[4] lg:scale-[6] sm:scale-[10]"
+                                     src="img/spae.jpg">
+                            </div>
+
+                            <div class="w-1/2 h-full inline float-left 2xl:inline xl:inline lg:inline md:hidden sm:hidden">
+                                <div class="w-full h-full flex items-center justify-center overflow-hidden ">
+                                    <div class="boximg w-1/2 h-1/2 relative z-20 flex items-center justify-center overflow-hidden">
+                                        <img class="inimg w-full"
+                                             src="img/spae.jpg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-1/2 h-full inline float-left relative z-30 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full">
+                                <div class="w-full h-full overflow-hidden">
+                                    <div class="w-full h-2/6 relative z-20 flex items-end justify-center overflow-hidden">
+                                        <span class="text-5xl text-gray-50">By Your Side</span>
+                                    </div>
+
+                                    <div class="w-full h-20  z-20 overflow-hidden  flex items-center justify-center">
+                                        <div class="w-5/6 h-full  indent-8 tracking-widest text-2xl flex items-center justify-center text-gray-50 leading-10    ">
+                                            <span id="singger">加尔文·哈里斯</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full h-2/6 z-20 overflow-hidden  flex  justify-center">
+                                        <div class="w-5/6 h-full  indent-8 tracking-widest text-2xl flex justify-center text-gray-50 leading-10    ">
+                                                                <span>
+                                                                        Darkness of the night!
+                                                                        黑夜昏暗无比
+                                                                    <br>
+                                                                        &nbsp;&nbsp;&nbsp;I'll be by your side!
+                                                                        但我将陪伴你身旁
+                                                                </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="w-full h-1/6 overflow-hidden">
+                                        <div class="w-full h-1/6  flex justify-center items-center">
+                                            <div style="cursor:pointer"
+                                                 id="musicbutton"
+                                                 class="w-1/12 text-lg h-full flex justify-center items-center text-gray-50  float-left rounded-full">
+                                                <span id="musictext">播放</span>
+                                            </div>
+
+                                            <div style="cursor:pointer"
+                                                 id="musicrest"
+                                                 class="w-1/12 text-lg h-full flex justify-center items-center text-gray-50  float-left rounded-full">
+                                                <span id="musicresttext">重放</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-full h-2/6   items-center">
+                                            <div id="startbutton"
+                                                 class="w-1/12 text-xl h-1/2 flex items-center text-gray-50  float-left">
+                                                <span id="startmusictime">00:00</span>
+                                            </div>
+
+                                            <div id="lasttbutton"
+                                                 class="w-1/12 text-xl h-1/2 flex items-center text-gray-50  float-right">
+                                                <span id="lastmusictime">00:00</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-full h-2/6 items-center">
+                                            <div id="centermusic"
+                                                 class="opacity-50 w-full bg-gray-50 text-xl h-1/2 flex items-center text-gray-50  float-left rounded-full">
+                                                <span id="centermusicbar"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <audio loop
+                                           id="music">
+                                        <source src="audio/Calvin%20Harris,Tom%20Grennan%20-%20By%20Your%20Side.mp3">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="spacelbox2"
+                     class="w-full h-1/2  flex items-center justify-center bg-blue-400 float-left">
+                    <button id="listen">
+                        点击试听
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="inbox"
+             class="inbox w-full h-screen  flex items-center justify-between flex-shrink-0 bg-gray-500">
+            <div class="inbox w-full h-1/2  flex items-center justify-center">
+                <span class="text-7xl text-blue-50 font-black">杜比全景声
+                    <br>Dolby Pro Logic</span>
+            </div>
+
+            <div class="inbox w-full h-1/2  flex items-center justify-center">
+                <span class="text-7xl text-blue-50 font-black">将于今年晚些时候全平台上线</span>
+            </div>
+        </div>
+        <div class="inbox w-full h-screen bg-blue-400 flex items-center justify-between flex-shrink-0">
+            <div id="leftbox"
+                 class="leftbox w-1/2 h-screen z-10  float-left inline 2xl:inline xl:inline lg:inline md:hidden sm:hidden">
+                <div class="w-full h-full">
+                    <div class="w-full h-full flex items-center justify-center relative z-10">
+                        <span id="gettext"
+                              class="text-6xl text-blue-50 font-black animate-pulse">加入我们</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/2 h-screen  float-left inline 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:inline w-screen sm:inline w-screen">
+                <div class="w-full h-full">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="w-4/6 h-4/5  rounded-3xl flex items-center justify-center">
+                            <div class="w-full h-4/5  rounded-3xl">
+                                <div class="w-full h-1/5  flex items-center justify-center">
+                                    <div class="input-group w-2/3 2xl:w-2/3 xl:w-2/3 lg:w-2/3 md:w-full sm:w-full 2xl:h-2/4 xl:h-2/4 lg:h-2/4 md:h-2/4 sm:h-1/3">
+                                        <input id="usernamereg"
+                                               required=""
+                                               type="text"
+                                               name="text"
+                                               autocomplete="off"
+                                               class="input w-full h-full">
+                                        <label class="user-label  2xl:text-lg xl:text-lg lg:text-lg md:text-xl sm:text-8xl">用户名 </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-full h-1/5  flex items-center justify-center">
+                                    <div class="input-group w-2/3 2xl:w-2/3 xl:w-2/3 lg:w-2/3 md:w-full sm:w-full 2xl:h-2/4 xl:h-2/4 lg:h-2/4 md:h-2/4 sm:h-1/3">
+                                        <input id="passwordreg"
+                                               required=""
+                                               type="password"
+                                               name="text"
+                                               autocomplete="off"
+                                               class="input w-full h-full">
+                                        <label class="user-label 2xl:text-lg xl:text-lg lg:text-lg md:text-xl sm:text-8xl">密码</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-full h-1/5 flex items-center justify-center">
+                                    <div class="input-group w-2/3 2xl:w-2/3 xl:w-2/3 lg:w-2/3 md:w-full sm:w-full 2xl:h-2/4 xl:h-2/4 lg:h-2/4 md:h-2/4 sm:h-1/3">
+                                        <input id="passwordregagain"
+                                               required=""
+                                               type="password"
+                                               name="text"
+                                               autocomplete="off"
+                                               class="input w-full h-full">
+                                        <label class="user-label 2xl:text-lg xl:text-lg lg:text-lg md:text-xl sm:text-8xl">确认密码</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-full h-1/5  flex items-center justify-center">
+                                    <div class="input-group w-2/3 2xl:w-2/3 xl:w-2/3 lg:w-2/3 md:w-full sm:w-full 2xl:h-2/4 xl:h-2/4 lg:h-2/4 md:h-2/4 sm:h-1/3">
+                                        <input id="emailreg"
+                                               required=""
+                                               type="text"
+                                               name="text"
+                                               autocomplete="off"
+                                               class="input w-full h-full">
+                                        <label class="user-label 2xl:text-lg xl:text-lg lg:text-lg md:text-xl sm:text-8xl">邮箱</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-full h-1/5 flex items-center justify-center">
+                                    <button id="regbtn"
+                                            class="registertn">
+                                        注册
+                                    </button>
+                                    <a href="page/login.html">
+                                        <button id="loginbtn"
+                                                class="registertn">
+                                            登录
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="js/index.js"></script>

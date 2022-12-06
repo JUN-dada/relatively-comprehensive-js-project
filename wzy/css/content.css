@@ -1,0 +1,131 @@
+.con {
+  display: flex;
+  font-size: 17px;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.con .se {
+  display: flex;
+  width: 100%;
+ margin-top: 40px;
+  justify-content:space-around;
+}
+.con .se input {
+  width: 200px;
+  outline-style: none;
+  border: none;
+}
+.con .se p{
+  width: 200px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.img{
+  margin-top: 5%;
+}
+.img img{
+height: 100px;
+
+}
+.con .se div span {
+  display: flex;
+  line-height: 60px;
+}
+
+.itme {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.item1 {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+.item1 p {
+  line-height: 50px;
+}
+
+.onehtml{
+display: flex;
+  width: 98%;
+  height: 120px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 10px 0;
+  justify-content: space-between;
+  border: 2px solid rgba(14, 14, 15, 0.248);
+  box-shadow: inset  10px 15px  10px 1px rgba(14, 14, 15, 0.248);
+  
+}
+.onehtml div img{
+  object-fit: contain;
+  height: 100%;
+border-radius: 50%;
+}
+.cont1{
+  width: 300px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+}
+.cont1 a{
+  color: black;
+
+}
+.text{ 
+  width: 100%;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.text1{
+  display: flex;
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.text2{
+  display: flex;
+  height: 100%;
+  padding: 10px 0;
+flex-direction: column;
+align-items: left;
+}
+.del {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+.del span{
+ width: 100%;
+ height: 60%;
+ border: none;
+ border-radius: 50%;
+ background-color:#ffff;
+ opacity: 0;
+}
+.del{
+  background-image: url(../image/del.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.fsection{
+  display: flex;
+  font-size: 17px;
+  line-height: 60px;
+  color: aliceblue;
+  cursor: pointer;
+  justify-content:space-around ;
+}

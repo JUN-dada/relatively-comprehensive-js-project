@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/root user.css" />
+  <link rel="stylesheet" href="./css/content.css" />
+</head>
+<style>
+  .top {
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(182, 182, 182);
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .top a {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 70px;
+    position: relative;
+    left: -40%;
+    top: 35%;
+  }
+
+  .lbt-left {
+    margin-top: 100px;
+    width: 35%;
+    height: 250px;
+    /* background-color: bisque; */
+  }
+
+  .top1 {
+    width: 49%;
+    height: 80px;
+    background-color: rgb(222, 231, 228);
+    font-size: 12px;
+    margin-left: 20%;
+  }
+
+  .top2 {
+    width: 49%;
+    height: 80px;
+    background-color: rgb(186, 185, 185);
+    font-size: 12px;
+    margin-top: 30px;
+  }
+
+  .top3 {
+    width: 49%;
+    height: 80px;
+    background-color: rgb(186, 186, 186);
+    font-size: 12px;
+    margin-left: 51%;
+    margin-top: -80px;
+  }
+
+  .lbt-left h2 {
+    position: relative;
+    left: 30px;
+  }
+
+  .lbt-left h3 {
+    color: red;
+    text-align: center;
+  }
+
+  #banner {
+    height: 200px;
+    width: 800px;
+    padding: 0;
+    position: absolute;
+    /* 水平居中 */
+    left: 38%;
+    /* 垂直居中 */
+    top: 50%;
+    margin-top: -200px;
+    list-style: none;
+  }
+
+  /* 移入到轮播图区域把鼠标形状变成‘手’ */
+  #banner:hover {
+    cursor: pointer;
+  }
+
+  li {
+    position: absolute;
+    left: 0;
+    /* 过渡属性，让轮播图切换更自然 */
+    transition: 0.4s;
+
+
+  }
+
+  .user {
+    height: 30px;
+  }
+
+  .user div {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border-right: 1px solid rgb(193, 193, 193);
+  }
+
+  .user p {
+    font-size: 10px;
+    font-weight: 10;
+  }
+  audio{
+    position: absolute;
+    top: 463px;
+    left: 458px;
+    background-color: aqua;
+  }
+</style>
+
+<body>
+  <article class="zong">
+    <aside class="bod">
+      <!-- 头像 -->
+      <div class="siton">
+        <img src="./image/body.png" alt="" />
+        <span>已登入</span>
+      </div>
+      <p>个人主页</p>
+      <p>音乐管理</p>
+      <p>信息管理</p>
+      <p>用户管理</p>
+      <p>修改密码</p>
+    </aside>
+    <header class="head">
+      <article class="title">
+        <span>音乐管理系统</span>
+        <!-- 搜索 -->
+        <div class="search">
+          <!-- <button></button> -->
+          <input type="search" name="" id="" placeholder="请输入内容进行搜索......" />
+        </div>
+        <div class="ext"><a href="">退出登入</a></div>
+      </article>
+      <article class="content">
+        <div class="con">
+
+          <p><span id="span1"></span></p><br>
+          <p><img src="./img/img4.jpg" id="imgx" style="width:100px;height:100px;"></p>
+          <p><input type="button" value="切换用户" onclick="change()"></p>
+          <div class="user">
+            <div>
+              <h4>0</h4><br>
+              <p>动态</p>
+            </div>
+            <div>
+              <h4>3</h4><br>
+              <p>关注</p>
+            </div>
+            <div>
+              <h4>5</h4><br>
+              <p>粉丝</p>
+            </div>
+          </div>
+          <audio src="./花粥 - 庸人自扰之.flac" controls></audio>
+          <ul id="banner">
+            <li id="dsa"></li>
+            <li id="dsa"></li>
+            <li id="dsa"></li>
+          </ul>
+        </div>
+
+        <!-- <div class="onehtml">
+            <div><img src="" alt=""></div>
+            <div>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div> -->
+        <!-- <div><button></button></div> -->
+        </div>
+
+      </article>
+      <footer class="fsection"></footer>
+    </header>
+  </article>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  var imgobj2 = new Image();//图片对象用于提前提取图片地址
+  var imgobj3 = new Image();
+  var imgobj4 = new Image();
+  var imgobj1 = new Image();
+
+  //将图片地址放入图片对象中
+  imgobj1.src = "../img/img4.jpg";
+  imgobj2.src = "../img/img5.jpg";
+  imgobj3.src = "../img/img6.jpg";
+  imgobj4.src = "../img/img7.jpg";
+
+  //用数组存储图片对象与姓名对象
+  var imgArr = [imgobj1, imgobj2, imgobj3, imgobj4];
+  var nameArr = ["董德林", "李永", "张子俊", "吴增益"];
+
+  //随机切换函数
+  function change() {
+    var num = Math.floor(Math.random() * nameArr.length);
+    document.getElementById("span1").innerText = nameArr[num];
+    document.getElementById("imgx").src = imgArr[num].src;
+  }
+</script>
+<!-- <script type="text/html" id="web">
+  {{each data}}
+  <li>
+    <span>{{$value.time}}</span>
+    <span>{{$value.username}}</span>
+    <span>{{$value.content}}</span>
+  </li>
+  {{/each}}
+</script> -->
+<script src="./js/root user.js"></script>
+<script>
+  getEle(".bod>p").map((item) => {
+    item.addEventListener("click", () => {
+      console.log(123);
+    });
+  });
+</script>
+<script>
+  //1.获取ul
+  var cur_ul = document.getElementById('banner')
+  // 2.创建一个数组实例
+  var arr = new Array();
+
+  // 用js来创建li、img元素，有多少张图片要轮播就循环多少次
+  for (i = 1; i <= 3; i++) {
+    // 创建li元素
+    var cur_li = document.getElementById('dsa')
+    // 创建img元素
+    var cur_img = document.createElement('img')
+    // 给img元素设置src、width、height属性
+    // 这里src是轮播图的路径
+    // 在img文件夹下的图片命名为1.jpg、2.jpg、3.jpg....才可以这样写
+    cur_img.src = '../img/img' + i + '.jpg';
+    cur_img.style.width = '150px';
+    cur_img.style.height = '150px';
+    cur_img.style.background = 'black';
+    // 把img元素插入到创建的li里面
+    cur_li.appendChild(cur_img);
+    // 然后在把li插入到ul里面
+    cur_ul.appendChild(cur_li);
+    // 然后给ul元素设置事件，鼠标移进来停止轮播
+    cur_ul.onmouseenter = function () {
+      clearInterval(timer)
+    }
+    // 鼠标移出ul又继续轮播图片
+    cur_ul.onmouseleave = function () {
+      timer = setInterval(get_next, 3000)
+    }
+    // 当创建完一个li（li里已经有img元素）就把li添加到arr数组里
+    // arr里存的li 相当于一个对象，在其他地方在把arr里的li取出来，还是指向原来那个，并不是一个新的li
+    // 相当于对象的浅拷贝，指针指向问题
+    arr.push(cur_li)
+  }
+
+  // 因为所写的轮播图是中间图片放大大，左右两边图片正常，所以要进行下面的操作
+  // 如果你只需要那种一张张图片轮播，即没有左右两边的轮播图，可以去掉下面代码
+  // 我们要三张图片进行展示， 左 中 右  
+  var len = arr.length - 1;
+  // 这是取得左边图片并调整位置
+  arr[len - 2].style.left = '100px';
+  // 这是取得中间图片并调整位置
+  arr[len - 1].style.left = '200px';
+  // 这是取得右边图片并调整位置
+  arr[len].style.left = '300px';
+  // 然后中间图片调用scale使其变大
+  arr[len - 1].style.transform = 'scale(1.3)'
+  // 中间图片也给其一个较大的堆叠数值，使其中间图片在左右图片上面
+  arr[len - 1].style.zIndex = 100;
+
+  // 封装轮播图函数 
+  // 然后开始进行轮播，原理就是换arr里的li元素的位置，越靠后的li元素z-index越大
+  // z-index越大，就会叠在其他li元素上面，所以换arr里的li位置就可以实现轮播
+  function get_next() {
+    var give_up = arr[arr.length - 1];//获取arr数值里最后一个li元素
+    arr.pop();//删除掉最后一个li元素
+    arr.unshift(give_up);//最后把最后一个元素插入到arr数组的前面
+    // 然后重新给arr数组里的li元素设置z-index和scale
+    for (var i = 0; i < arr.length; i++) {
+      arr[i].style.zIndex = i;
+      arr[i].style.transform = 'scale(1)'
+    }
+    // 这步就是展示arr的后三张图片，和前一个步骤的一样
+    arr[len - 2].style.left = '0px';
+    arr[len - 1].style.left = '200px';
+    arr[len].style.left = '400px';
+    arr[len - 1].style.transform = 'scale(1.3)'
+    arr[len - 1].style.zIndex = 100;
+  }
+  // 声明一个定时器，然后把轮播图函数放进间歇函数，3秒进行一次轮播
+  var timer = setInterval(get_next, 3000)
+
+
+  // 用js创建左箭头
+  var pre_img = document.createElement('img')
+  pre_img.src = '../img/left.jpg';//左箭头图片
+  pre_img.style.width = '15px';
+  pre_img.style.position = 'absolute';
+  pre_img.style.top = '-50px';
+  pre_img.style.bottom = 0;
+  pre_img.style.left = '-30px';
+  pre_img.style.margin = 'auto';
+  pre_img.style.zIndex = 100;
+  cur_ul.appendChild(pre_img);
+
+  // 用js创建右箭头
+  var next_img = document.createElement('img')
+  next_img.src = '../img/right.jpg';//右箭头的图片
+  next_img.style.width = '15px';
+  next_img.style.position = 'absolute';
+  next_img.style.top = '-50px';
+  next_img.style.bottom = 0;
+  next_img.style.right = '215px';
+  next_img.style.margin = 'auto';
+  next_img.style.zIndex = 100;
+  cur_ul.appendChild(next_img);
+
+  // 给左箭头点击绑定事件
+  pre_img.onclick = function () {
+    get_pre();
+  }
+  // 右箭头的作用就是向前轮播一直图片，和我们上面写的get_ne
+
+  next_img.onclick = function () {
+    get_next();
+  }
+
+  // 左箭头的绑定事件 和get_next()思路一样，就是要改一下就行。
+  // 先取出arr数组第一个li，在把这个li放到最后即可
+  function get_pre() {
+    var give_up = arr[0];
+    arr.shift();//取出来最后一张图片
+    arr.push(give_up);//把最后一张图片放到第一张
+    for (var i = 0; i < arr.length; i++) {
+      arr[i].style.zIndex = i;
+      arr[i].style.transform = 'scale(1)'
+    }
+    arr[len - 2].style.left = '0px';
+    arr[len - 1].style.left = '200px';
+    arr[len].style.left = '400px';
+    arr[len - 1].style.transform = 'scale(1.3)'
+    arr[len - 1].style.zIndex = 100;
+  }
+</script>
+<script src="./script.js"></script>

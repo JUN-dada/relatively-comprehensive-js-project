@@ -1,0 +1,33 @@
+.con{
+    display: flex;
+    font-size: 17px;
+    height: 100%;
+    flex-direction: column;
+  .se{
+    display: flex;
+    input{
+        outline-style: none;
+        border: none;
+    }
+    div span{
+        display: flex;
+    }
+  }
+} 
+.con>div:nth-child(1){
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    img{
+        height: 5rem;
+        object-fit: contain;
+    }
+}
+.con>div:nth-child(2){
+    display: flex;
+    margin-top: 20px;
+justify-content: space-around;
+p{
+    line-height: 50px;
+}
+}

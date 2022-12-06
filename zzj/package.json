@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "three": "^0.146.0",
+    "vanta": "^0.5.24"
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/output.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet" href="../css/page.css"/>
+    <script src="../js/tailwind.js"></script>
+    <!--    <link rel="stylesheet" href="../dist/output.css">-->
+</head>
+
+<body style="margin: 0">
+<div class="nav w-full h-16 sticky top-0 z-50">
+    <div id="selectbox" class="selectbox float-left w-1/6 inline h-full flex items-center justify-center 2xl:inline 2xl:flex xl:inline xl:flex lg:hidden lg:flex md:hidden sm:hidden">
+        <div id="selectonbox" class="w-full bg-white h-full">
+            <div class="ssk w-full h-full flex justify-center align-middle">
+                <input id="selectinput" placeholder="输入你想搜索的内容" type="text" class="selectinput w-full h-full text-center text-blue-900" required="">
+            </div>
+            <div id="selectonbox2" class="w-full h-60 bg-white hidden text-blue-900">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="float-left w-2/6 h-full inline 2xl:inline xl:inline lg:hidden md:hidden sm:hidden">
+
+    </div>
+
+    <div class="float-left w-2/6 h-full text-sm flex flex items-center justify-center font-medium 2xl:w-1/6 xl:w-1/6 lg:w-2/6 sm:w-2/6">
+        <span id="saohuatext"></span>
+    </div>
+    <div style="cursor:pointer" id="userpage"
+         class="float-left w-1/6 h-full flex items-center justify-center text-xl font-medium 2xl:w-1/6 xl:w-1/6 lg:w-2/6 sm:w-2/6"
+    >
+        <span>个人主页</span>
+    </div>
+    <div
+            class="float-left w-1/6 h-full flex items-center justify-center text-xl font-medium 2xl:w-1/6 xl:w-1/6 lg:w-2/6 sm:w-2/6 overflow-hidden"
+    >
+        <span id="hellouser"></span>
+    </div>
+</div>
+
+<div
+        id="onebigbox"
+        class="w-full scroll-smooth h-screen bigcountbox flex items-center overflow-hidden justify-center flex-col"
+>
+    <div
+            id="inbigcountboxid"
+            class="inbigcountbox w-full h-screen justify-start scroll-smooth"
+    >
+        <!--        <div class="inbox w-full h-screen  flex items-center justify-between">-->
+        <!--            <div class="w-full h-full absolute z-10 flex items-center justify-center overflow-hidden">-->
+        <!--                <img class="bigimg scale-[4] blur-sm 2xl:scale-[4] xl:scale-[4] lg:scale-[6] sm:scale-[10]"-->
+        <!--                     src="../img/img1.jpg">-->
+        <!--            </div>-->
+
+        <!--            <div class="w-1/2 h-full inline float-left 2xl:inline xl:inline lg:inline md:hidden sm:hidden">-->
+        <!--                <div class="w-full h-full flex items-center justify-center overflow-hidden ">-->
+        <!--                    <div class="boximg w-1/2 h-1/2 relative z-20 flex items-center justify-center overflow-hidden">-->
+        <!--                        <img class="inimg w-full" src="../img/img1.jpg">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="w-1/2 h-full inline float-left relative z-30 2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full">-->
+        <!--                <div class="w-full h-full overflow-hidden">-->
+        <!--                    <div class="w-full h-2/6 relative z-20 flex items-end justify-center overflow-hidden">-->
+        <!--                        <span class="text-5xl text-gray-50">《升空的焰火，从下面看还是从侧面看?》</span>-->
+        <!--                    </div>-->
+
+        <!--                    <div class="w-full h-20  z-20 overflow-hidden  flex items-center justify-center">-->
+        <!--                        <div class="w-5/6 h-full  indent-8 tracking-widest text-2xl flex items-center justify-center text-gray-50 leading-10    ">-->
+        <!--                            <span id="singger">Daoko / 米津玄師</span>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+
+        <!--                    <div class="w-full h-2/6 z-20 overflow-hidden  flex  justify-center">-->
+        <!--                        <div class="w-5/6 h-full  indent-8 tracking-widest text-2xl flex justify-center text-gray-50 leading-10    ">-->
+        <!--                            <span>-->
+        <!--                                樱花落下的速度是每秒五厘米， 我该用怎么样的速度，才能与你相遇。 雨滴降落的速度是每秒十米，我该用怎么样的速度，才能将你挽留。 陨石坠落的速度是每秒十千米，我该用怎么样的速度，才能将你拯救。 烟花消散的速度是每秒三亿米，我该用什么样的速度，才能将你追回-->
+        <!--                            </span>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+
+        <!--                    <div class="w-full h-1/6 overflow-hidden">-->
+        <!--                        <div class="w-full h-1/6  flex justify-center items-center">-->
+        <!--                            <div id="musicbutton"-->
+        <!--                                 class="w-1/12 text-lg h-full flex justify-center items-center text-gray-50  float-left rounded-full">-->
+        <!--                                <span id="musictext">播放</span>-->
+        <!--                            </div>-->
+
+        <!--                            <div id="musicrest"-->
+        <!--                                 class="w-1/12 text-lg h-full flex justify-center items-center text-gray-50  float-left rounded-full">-->
+        <!--                                <span id="musicresttext">重放</span>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+
+        <!--                        <div class="w-full h-2/6   items-center">-->
+        <!--                            <div id="startbutton"-->
+        <!--                                 class="w-1/12 text-xl h-1/2 flex items-center text-gray-50  float-left">-->
+        <!--                                <span id="startmusictime">00:00</span>-->
+        <!--                            </div>-->
+
+        <!--                            <div id="lasttbutton"-->
+        <!--                                 class="w-1/12 text-xl h-1/2 flex items-center text-gray-50  float-right">-->
+        <!--                                <span id="lastmusictime">00:00</span>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+
+        <!--                        <div class="w-full h-2/6 items-center">-->
+        <!--                               <div id="centermusic"-->
+        <!--                                 class="opacity-50 w-full bg-gray-50 text-xl h-1/2 flex items-center text-gray-50  float-left rounded-full">-->
+        <!--                                <span id="centermusicbar"></span>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <audio loop id="music">-->
+        <!--                        <source src="../audio/打上花火.mp3">-->
+        <!--                    </audio>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="inbox w-full h-screen bg-gray-500 flex items-center justify-between">2</div>-->
+        <!--        <div class="inbox w-full h-screen bg-red-300 flex items-center justify-between">3</div>-->
+        <!--        <div class="inbox w-full h-screen bg-blue-400 flex items-center justify-between">4</div>-->
+    </div>
+</div>
+</body>
+</html>
+<script src="../js/page1s.js"></script>

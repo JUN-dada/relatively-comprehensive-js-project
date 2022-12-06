@@ -1,0 +1,149 @@
+@charset "UTF-8";
+.bod {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  flex-direction: column;
+  background-color: #233645;
+}
+.bod p {
+  width: 100%;
+  cursor: pointer;
+
+}
+
+.zong {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.zong .head {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.zong .head .title span {
+  font-weight: 1000;
+  background-image: -webkit-linear-gradient(left, blue, #66ffff 10%, #cc00ff 20%, #cc00cc 30%, #ccccff 40%, #00ffff 50%, #ccccff 60%, #cc00cc 70%, #cc00ff 80%, #66ffff 90%, blue 100%);
+  /* 按文字拆分背景 */
+  -webkit-background-clip: text;
+  /* 动画必须设置初始值 */
+  background-size: 200% 100%;
+  /* 将字体设置为透明色 */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: masked-animation 4s linear infinite;
+          animation: masked-animation 4s linear infinite;
+}
+.zong .head .title {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #233645;
+}
+.zong .head .title span {
+  line-height: 100%;
+}
+.zong .head .content {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+  padding: 10px 0 10px 10px;
+  justify-content: center;
+  background-color: rgba(242, 242, 240, 0.385);
+  border: 2px solid rgb(205, 195, 195);
+  box-shadow: inset 10px 0px 10px rgba(0, 0, 255, 0.248), inset -15px 0px 10px rgba(255, 0, 0, 0.218), inset 0px 5px 10px rgba(255, 255, 0, 0.472), 0px -5px 10px rgba(0, 128, 0, 0.313) inset;
+}
+.zong .head .content .con {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+.siton {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  font-size: 12px;
+  flex-direction: column;
+}
+.siton img {
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.search {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.search input {
+  outline-style: none;
+  width: 340px;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  padding-left: 20px;
+  letter-spacing: 2px;
+  background-color: #233645;
+}
+.search input:focus {
+  border-radius: 30px;
+  font-weight: 500;
+  outline: 2px solid rgb(254, 249, 249);
+}
+.search input::-moz-placeholder {
+  padding-left: 5px;
+}
+.search input:-ms-input-placeholder {
+  padding-left: 5px;
+}
+.search input::placeholder {
+  padding-left: 5px;
+}
+
+.ext {
+  font-size: 15px;
+}
+.ext a {
+  color: aliceblue;
+}
+
+.fsection {
+  width: 100%;
+  height: 10%;
+  background-color: #233645;
+}
+.click{
+  background-color: #1a2730;
+  border: 1px solid #000;
+}

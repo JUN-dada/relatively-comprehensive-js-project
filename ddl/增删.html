@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        font-size: 15px;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: #e493d0;
+        background-image: radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
+            radial-gradient(closest-side, rgba(243, 11, 164, 1), rgba(243, 11, 164, 0)),
+            radial-gradient(closest-side, rgba(254, 234, 131, 1), rgba(254, 234, 131, 0)),
+            radial-gradient(closest-side, rgba(170, 142, 245, 1), rgba(170, 142, 245, 0)),
+            radial-gradient(closest-side, rgba(248, 192, 147, 1), rgba(248, 192, 147, 0));
+        background-size:
+            130vmax 130vmax,
+            80vmax 80vmax,
+            90vmax 90vmax,
+            110vmax 110vmax,
+            90vmax 90vmax;
+        background-position: -80vmax -80vmax,
+            60vmax 60vmax,
+            10vmax 10vmax,
+            -30vmax -30vmax,
+            50vmax 50vmax;
+        background-repeat: no-repeat;
+        animation: 10s movement linear infinite;
+    }
+
+    body::after {
+        content: "";
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    @keyframes movement {
+
+        0%,
+        100% {
+            background-size:
+                130vmax 130vmax,
+                80vmax 80vmax,
+                90vmax 90vmax,
+                110vmax 110vmax,
+                90vmax 90vmax;
+            background-position: -80vmax -80vmax,
+                60vmax 60vmax,
+                10vmax 10vmax,
+                -30vmax -30vmax,
+                50vmax 50vmax;
+        }
+
+        25% {
+            background-size:
+                100vmax 100vmax,
+                90vmax 90vmax,
+                100vmax 100vmax,
+                90vmax 90vmax,
+                60vmax 60vmax;
+            background-position:
+                -60vmax -90vmax,
+                50vmax -40vmax,
+                60vmax -20vmax,
+                -40vmax -20vmax,
+                40vmax 60vmax;
+        }
+
+        50% {
+            background-size:
+                80vmax 80vmax,
+                100vmax 100vmax,
+                80vmax 80vmax,
+                60vmax 60vmax,
+                80vmax 80vmax;
+            background-position:
+                -50vmax -70vmax,
+                40vmax -30vmax,
+                10vmax 0vmax,
+                20vmax 10vmax,
+                30vmax 70vmax;
+        }
+
+        75% {
+            background-size:
+                90vmax 90vmax,
+                90vmax 90vmax,
+                100vmax 100vmax,
+                90vmax 90vmax,
+                70vmax 70vmax;
+            background-position:
+                -50vmax -40vmax,
+                50vmax -30vmax,
+                20vmax 0vmax,
+                -10vmax 10vmax,
+                40vmax 60vmax;
+        }
+    }
+
+    .big {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 80px;
+    }
+
+    .data_1,
+    .data_2,
+    .data_3 {
+        display: none;
+    }
+
+    .btn>button {
+        border: 0px;
+        width: 100px;
+        height: 25px;
+        border-radius: 10px;
+    }
+
+    .btn>button:hover {
+        background-color: pink;
+    }
+    .show {
+        display: block;
+    }
+
+    .active {
+        background-color: pink;
+    }
+
+    table {
+        width: 800px;
+    }
+</style>
+
+<body>
+    <div class="big">
+        <h1>我的歌单</h1>
+        <h4>音乐的力量！！！</h4>
+        <div class="btn">
+            <button type="button" class=" btn1 active">添加歌曲</button>
+            <button type="button" class=" btn1">我的歌曲</button>
+        </div>
+        <div class="data">
+            <div class="data_1 datah show">
+                歌曲名称:<input type="text" id="nameIpt" /><br>
+                歌手:<input type="text" id="ageIpt" /><br>
+                是否大陆歌手:<label>
+                    大陆:<input type="radio" name="sex" value="0" checked />
+                    海外:<input type="radio" name="sex" value="1" />
+                </label><br>
+                歌曲类型:<select class="sel">
+                    <option value="--请选择--">--请选择--</option>
+                    <option value="民谣">民谣</option>
+                    <option value="流行乐">流行乐</option>
+                    <option value="古典乐">古典乐</option>
+                    <option value="rap">rap</option>
+                </select><br>
+
+                <button type="button" onclick="add()">添加</button>
+            </div>
+            <div class="data_2 datah">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <!--自己切换-->
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>歌曲名称</th>
+                            <th>歌手</th>
+                            <th>歌手地区</th>
+                            <th>音乐种类</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody1">
+                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="data_3 datah">
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+
+                            <th>序号</th>
+                            <th>歌曲名称</th>
+                            <th>歌手</th>
+                            <th>歌手地区</th>
+                            <th>音乐种类</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody2">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 获取DOM元素
+    var btnDOMs = document.querySelectorAll(".btn1")
+    var dataDOMs = document.querySelectorAll(".datah")
+    var nameDOM = document.querySelector("#nameIpt")
+    var ageDOM = document.querySelector("#ageIpt")
+    var sexDOMs = document.querySelectorAll("input[name='sex']")
+    var selDOMs = document.querySelector(".sel")
+    var tbody1DOM = document.querySelector(".tbody1")
+    var tbody2DOM = document.querySelector(".tbody2")
+    // tab切换
+    for (var i = 0; i < btnDOMs.length; i++) {
+        btnDOMs[i].xiabiao = i;
+        btnDOMs[i].onclick = function () {
+            for (var a = 0; a < btnDOMs.length; a++) {
+                btnDOMs[a].classList.remove("active");
+                dataDOMs[a].classList.remove("show");
+            }
+            this.classList.add("active");
+            dataDOMs[this.xiabiao].classList.add("show");
+        }
+    }
+
+    // 添加函数
+    var arr = [];
+    if (localStorage.a04200) {
+        arr = JSON.parse(localStorage.a04200);
+    }
+    show()
+    function add() {
+        var obj = {
+            name: nameDOM.value,
+            age: ageDOM.value,
+            sex: sexDOMs[0].checked ? "海外" : "内地",
+            diQu: selDOMs.value,
+            time: buildTime(),
+            id: +new Date(),
+            isBlack: 0  //0正常 1拉黑
+        }
+        arr.push(obj);
+        localStorage.a04200 = JSON.stringify(arr);
+        show();
+        btnDOMs[1].onclick();
+    }
+
+    // 渲染函数
+    function show() {
+        var str = "";
+        var str1 = "";
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].isBlack == 0) {
+                str += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${arr[i].name}</td>
+                        <td>${arr[i].age}</td>
+                        <td>${arr[i].sex}</td>
+                        <td>${arr[i].diQu}</td> 
+                        <td>${arr[i].time}</td>
+                        <td>
+                            <button type="button" onclick="del(${arr[i].id})">删除</button>
+                            
+                        </td>
+                    </tr>
+                `;
+            }
+            if (arr[i].isBlack == 1) {
+                str1 += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${arr[i].name}</td>
+                        <td>${arr[i].age}</td>
+                        <td>${arr[i].sex}</td>
+                        <td>${arr[i].diQu}</td>              
+                        <td>${arr[i].time}</td>
+                        <td>
+                            <button type="button" onclick="del(${arr[i].id})">删除</button>
+                            
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+        tbody1DOM.innerHTML = str;
+        tbody2DOM.innerHTML = str1;
+    }
+
+    // 删除函数
+    function del(id) {
+        var f = confirm("是否确认删除")
+        var index = arr.findIndex(function (v, k) {
+            return v.id == id
+        })
+        if (f == false) {
+            return;
+        } else {
+            arr.splice(index, 1);
+        }
+        localStorage.a04200 = JSON.stringify(arr);
+        show()
+    }
+
+    // 时间函数
+    function buildTime() {
+        var d = new Date();
+        return d.getFullYear() + "-" +
+            b0(d.getMonth()) + "-" +
+            b0(d.getMonth()) + " " +
+            b0(d.getHours()) + ":" +
+            b0(d.getMinutes()) + ":" +
+            b0(d.getSeconds())
+
+    }
+    // 补零函数
+    function b0(a) {
+        return a < 10 ? "0" + a : a
+    }
+
+
+
+
+
+</script>

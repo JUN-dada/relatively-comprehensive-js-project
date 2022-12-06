@@ -1,0 +1,68 @@
+* {
+    transition: 1s;
+    font-family: -apple-system;
+}
+
+
+.nav {
+    background: rgba(123, 123, 123, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+}
+
+
+.inbigcountbox {
+    justify-self: start;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.inimg {
+    transform: scale(3);
+}
+
+
+/* From uiverse.io by @alexruix */
+.selectinput {
+    line-height: 28px;
+    border: 2px solid transparent;
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #0d0c22;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.selectinput:focus, input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+}
+
+.selectinput::placeholder {
+    color: #777;
+}
+
+.selectinput:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+.ssk
+{
+    background: rgba(123, 123, 123, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
